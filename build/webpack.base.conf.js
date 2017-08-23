@@ -6,6 +6,7 @@ const vuxLoader = require('vux-loader')
 
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
+var tsLoaderConfig = require('./ts-loader.conf')
 
 function resolve(dir) {
   return path.join(__dirname, '..', dir)
@@ -13,7 +14,7 @@ function resolve(dir) {
 
 let webpackConfig = {
   entry: {
-    app: './src/main.js'
+    app: './src/index.ts'
   },
   output: {
     path: config.build.assetsRoot,
@@ -23,7 +24,7 @@ let webpackConfig = {
       : config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json' , '.ts'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
       '@': resolve('src')
@@ -44,6 +45,11 @@ let webpackConfig = {
         test: /\.vue$/,
         loader: 'vue-loader',
         options: vueLoaderConfig
+      },
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        options: tsLoaderConfig
       },
       {
         test: /\.js$/,
