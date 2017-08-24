@@ -1,15 +1,15 @@
 import { User } from '../model/models';
 import { Injectable } from '@angular/core';
 import { GlobalObserver } from '../interface/globalObserver.interface';
-import { MainNavComponent } from '../page/widget/mainNav.component';
-import { AppComponent } from '../page/app.component';
+// import { MainNavComponent } from '../../page/widget/mainNav.component';
+import { AppComponent } from '../../page/app.component';
 
 @Injectable()
 export class GlobalService {
     public userInfo:User;
     public userInfoLoaded:boolean=false;
     public observers:GlobalObserver[]=[];
-    public mainNav:MainNavComponent;
+    // public mainNav:MainNavComponent;
     public pageParams:Object;
     public app:AppComponent;
     public defaultEditorOptions:Object={

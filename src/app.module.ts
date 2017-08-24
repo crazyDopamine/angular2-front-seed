@@ -30,7 +30,7 @@ import { CookieService } from 'angular2-cookie/services/cookies.service';
 @NgModule({
     imports:[BrowserModule,HttpModule],
     declarations:[AppComponent],
-    providers:[GlobalService,Location,CookieService],
+    providers:[GlobalService,Location,CookieService,FileUploadModule],
     bootstrap:[AppComponent]
 })
 

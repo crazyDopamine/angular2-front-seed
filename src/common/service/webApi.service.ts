@@ -21,9 +21,9 @@ export class BaseApi{
             let promise = new Promise<any>((success,error)=>{
                 switch (res.status){
                     case 401:
-                        self.global.app.loginModal.show().then(function(){
-                            success(res);
-                        });
+                        // self.global.app.loginModal.show().then(function(){
+                        //     success(res);
+                        // });
                         break;
                     default:
                         error(res);

@@ -1,7 +1,7 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 var path = require('path')
 
-var projectName = 'report'
+var projectName = 'angular2-front-seed'
 
 module.exports = {
   build: {

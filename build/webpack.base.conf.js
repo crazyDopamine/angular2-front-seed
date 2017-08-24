@@ -48,7 +48,7 @@ let webpackConfig = {
       },
       {
         test: /\.ts$/,
-        loader: 'ts-loader',
+        loader: 'awesome-typescript-loader',
         options: tsLoaderConfig
       },
       {
